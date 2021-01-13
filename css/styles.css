@@ -1,22 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('//db.onlinewebfonts.com/c/0fddb08144cea533dcd3d39388b7ffbe?family=GrandSlang+Roman');
 
-// COLORS
-$bg-color: #000;
-$white: #fff;
-
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: $bg-color;
+  background: #000;
   font-family: 'Montserrat';
 }
 
 .home {
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 /* menu */
@@ -30,12 +26,12 @@ nav {
 }
 
 .menu__logo,
-.menu__items--link {
+.menu__items-link {
   padding: 40px;
 }
 
 .menu__logo a {
-  color: $white;
+  color: #fff;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
@@ -45,14 +41,14 @@ nav {
   display: flex;
 }
 
-.menu__items--link a {
+.menu__items-link a {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
 }
 
-.menu__items--link.active a {
+.menu__items-link.active a {
   text-decoration: underline;
 }
 
@@ -68,9 +64,15 @@ nav {
   width: 540px;
   height: 360px;
   margin: 50px 500px 20px 80px;
+  filter: grayscale(1);
+  transition: all 0.3s ease-out;
 }
 
-.container__item--header h1 {
+.container__item:hover {
+  filter: grayscale(0);
+}
+
+.container__item-header h1 {
   position: relative;
   top: 40px;
   left: 0;
@@ -90,32 +92,32 @@ nav {
   font-size: 64px;
 }
 
-.container__item--title a {
+.container__item-title a {
   color: #fff;
   text-decoration: none;
 }
 
-.container__item--1 {
+.container__item-1 {
   background: url(../images/img-one.jpeg) no-repeat 50% 50%;
   background-size: cover;
 }
 
-.container__item--2 {
+.container__item-2 {
   background: url(../images/img-two.jpeg) no-repeat 50% 50%;
   background-size: cover;
 }
 
-.container__item--3 {
+.container__item-3 {
   background: url(../images/img-three.jpeg) no-repeat 50% 50%;
   background-size: cover;
 }
 
-.container__item--4 {
+.container__item-4 {
   background: url(../images/img-four.jpeg) no-repeat 50% 50%;
   background-size: cover;
 }
 
-.container__item--5 {
+.container__item-5 {
   background: url(../images/img-five.jpeg) no-repeat 50% 50%;
   background-size: cover;
 }
@@ -127,7 +129,7 @@ nav {
     margin: 50px 100px 20px 80px;
   }
 
-  .container__item--header h1 {
+  .container__item-header h1 {
     font-size: 30px !important;
     left: -50%;
   }
@@ -157,6 +159,7 @@ nav {
   font-size: 46px;
   font-weight: 400;
   z-index: 2;
+  mix-blend-mode: difference;
 }
 
 .about__container p span {
@@ -167,18 +170,18 @@ nav {
   color: #fff;
 }
 
-p.about__container--link {
+p.about__container-link {
   font-size: 26px;
 }
 
-.about__container--link a {
+.about__container-link a {
   color: #fff;
   font-size: 26px;
 }
 
 .cursor-follow {
   position: absolute;
-  background: url(../images/cursor.jpeg) no-repeat 50% 50%;
+  background: url(../images/memoji_laptop.png) no-repeat 50% 50%;
   background-size: cover;
   width: 300px;
   height: 400px;
@@ -206,24 +209,24 @@ p.about__container--link {
   width: 70%;
   margin: 100px auto;
   /* border: 1px solid #5c5c5c; */
-  color: $white;
+  color: #fff;
   padding: 120px 40px;
   text-align: center;
 }
 
-.project__container--title h1 {
-  color: $white;
+.project__container-title h1 {
+  color: #fff;
   font-family: 'GrandSlang Roman';
   font-size: 140px;
 }
 
-.project__container--sub {
+.project__container-subtitle {
   margin: 20px 0;
   font-family: 'Montserrat';
   font-size: 16px;
 }
 
-.project__container--images {
+.project__container-images {
   position: relative;
   width: 100%;
   height: 2000px;
@@ -237,12 +240,12 @@ p.about__container--link {
   margin: 40px auto;
 }
 
-.project__image--one {
-  background: url(../images/img-one.jpeg) no-repeat 50% 50%;
+.project__image-one {
+  background: url(../images/img-one.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
-.project__image--two {
+.project__image-two {
   position: relative;
   top: -100px;
   left: -260px;
@@ -250,14 +253,14 @@ p.about__container--link {
   background-size: cover;
 }
 
-.project__image--three {
+.project__image-three {
   position: relative;
   left: 300px;
   background: url(../images/img-three.jpeg) no-repeat 50% 50%;
   background-size: cover;
 }
 
-.project__image--four {
+.project__image-four {
   position: relative;
   top: -200px;
   left: -100px;
@@ -276,7 +279,7 @@ p.about__container--link {
 }
 
 .project-next-link a {
-  color: $white;
+  color: #fff;
   text-decoration: none;
   font-family: 'GrandSlang Roman';
   font-size: 160px;
@@ -305,10 +308,10 @@ p.about__container--link {
     width: 90%;
   }
 
-  .project__image--one,
-  .project__image--two,
-  .project__image--three,
-  .project__image--four {
+  .project__image-one,
+  .project__image-two,
+  .project__image-three,
+  .project__image-four {
     position: relative;
     top: 0;
     left: 0;
